@@ -1,5 +1,10 @@
+# Nombres: Alexis Hernandez, Astrid Leon
+
 from subanimal import Ave
 from subanimal import Mamifero
+from subanimal import Reptil
+from subplanta import Flor
+from subplanta import Arbol
 from planta import Planta
 from animal import Animal
 from celula import Celula
@@ -10,18 +15,14 @@ from organismo import Organismo
 
 def main():
 
-    lista_animales = []
 
 # ---------------------------------ave-----------------------------------------------------------------------------
     perico = Ave("pepito",5)
     perico.set_nPatas(2)
 
-    lista_animales.append(perico.get_nombre()) 
-    lista_animales.append(perico.get_edad())
-    lista_animales.append(perico.get_nPatas())
 
     # print(perico.__repr__())
-    print(f"{perico.get_nombre()}, {perico.get_edad()}, {perico.get_nPatas()}")
+    print(f"{perico.get_nombre()}, {perico.get_edad()}, {perico.get_nPatas()}, {perico.get_vivomuerto()}")
     # perico.volar()
 # --------------------------------------------------------------------------------------------------------------
 
@@ -43,7 +44,7 @@ def main():
 
 # -------------------------------------------------------------------------------------------------------------------------
 # ------------------------------------plantae------------------------------------------------------------------------------
-
+    rosa = Flor("Rosa",)
     
 
 # -------------------------------------------------------------------------------------------------------------------------

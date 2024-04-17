@@ -3,7 +3,7 @@ class Organismo():
     def __init__(self,nombre,edad = 0):
         self.__nombre = nombre
         self.__edad = edad
-        self.vivo = bool
+        self.vivo = None
 
 
     def __repr__(self):
@@ -36,6 +36,12 @@ class Organismo():
         else:
             pass
     
+    def get_vivomuerto(self):
+
+        if self.vivo:
+            return "Está vivo"
+        else:
+            return "esta muerto"
     # metodos de interaccion y comportamiento
     # de clase
 

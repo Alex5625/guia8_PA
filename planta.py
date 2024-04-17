@@ -18,7 +18,7 @@ class Planta(Organismo):
     def set_tipos(self):
         return self.__tipos
 
-# esto es la fotosintesis
+# esto es la fotosintesis. Haciendo un polimorfismo
     def crecer(self):
         print(f"{self.get_nombre()} está haciendo fotosíntesis")
         self.crecer()

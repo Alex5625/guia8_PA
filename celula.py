@@ -16,5 +16,6 @@ class Celula(Microorganismo):
 
         return self.__tipo
     
-
-# agregar funciones de: dividirse 
+    def dividirse(self):
+        print(f"La célula {self.get_nombre} está dividiéndose")
+        self.crecer()
