@@ -4,23 +4,25 @@ class Planta(Organismo):
 
     def __init__(self, nombre, edad):
 
-        super().__init__(self, nombre ,edad)
-        self.__tipos = str
+        super().__init__(nombre, edad)
+        self.__tipo = None
 
 
 ##en organismo no hay npatas 
    
-    def get_tipos(self, tipo):
+    def set_tipo(self, tipo):
         if isinstance(tipo,str):
-            self.__tipos = tipo
+            self.__tipo = tipo
         pass
 
-    def set_tipos(self):
-        return self.__tipos
+    def get_tipo(self):
+        return self.__tipo
 
 # esto es la fotosintesis. Haciendo un polimorfismo
-    def crecer(self):
+    def fotosintesis(self):
         print(f"{self.get_nombre()} está haciendo fotosíntesis")
-        self.crecer()
+
+    def reproducirse(self):
+        print(f"{self.get_nombre()} se está reproduciendo")
 
     

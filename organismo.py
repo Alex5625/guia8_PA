@@ -39,9 +39,9 @@ class Organismo():
     def get_vivomuerto(self):
 
         if self.vivo:
-            return "Está vivo"
+            return f"{self.get_nombre()} Está vivo"
         else:
-            return "esta muerto"
+            return f"{self.get_nombre() } esta muerto"
     # metodos de interaccion y comportamiento
     # de clase
 
