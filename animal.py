@@ -16,6 +16,9 @@ class Animal(Organismo):
         else:
             raise TypeError("Tipo de caracter equivocado")
 
+    # metodos que mas adelante seran implementados con
+    # polimorfismo dependiendo de la especie
+
     def moverse(self):
         print(f"{self.get_nombre()} está caminando")
 

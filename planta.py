@@ -3,12 +3,12 @@ from organismo import Organismo
 class Planta(Organismo):
 
     def __init__(self, nombre, edad):
-
         super().__init__(nombre, edad)
         self.__tipo = None
 
 
-##en organismo no hay npatas 
+# el tipo es definido como un string para
+# la especie de la planta, get y set
    
     def set_tipo(self, tipo):
         if isinstance(tipo,str):
@@ -18,7 +18,6 @@ class Planta(Organismo):
     def get_tipo(self):
         return self.__tipo
 
-# esto es la fotosintesis. Haciendo un polimorfismo
     def fotosintesis(self):
         print(f"{self.get_nombre()} está haciendo fotosíntesis")
 
