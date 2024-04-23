@@ -46,11 +46,11 @@ class Organismo():
     # de clase
 
     def nacer(self):
-        print(f"{self.__nombre()} esta naciendo")
+        print(f"{self.get_nombre()} esta naciendo")
         self.vivo = True
     
     def crecer(self):
-        self.__edad += 1
+        self.__edad = self.__edad + 1
     
     def reproducirse(self):
         pass

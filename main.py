@@ -59,7 +59,7 @@ def main():
     rosa.set_tipo("Rosa")
     rosa.fotosintesis()
     rosa.reproducirse()
-    print(f"{rosa.get_nombre()}, {rosa.get_edad}, {rosa.get_tipo()}, {rosa.get_vivomuerto()}")
+    print(f"{rosa.get_nombre()}, {rosa.get_edad()}, {rosa.get_tipo()}, {rosa.get_vivomuerto()}")
 
     roble = Arbol("Planta2", 62)
     roble.set_tipo("Roble")

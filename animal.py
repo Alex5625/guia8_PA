@@ -14,12 +14,15 @@ class Animal(Organismo):
         if isinstance(numero, int):
             self.__numero_patas = numero
         else:
-            print
+            raise TypeError("Tipo de caracter equivocado")
 
     def moverse(self):
         print(f"{self.get_nombre()} está caminando")
 
-    def hacersonido():
+    def hacersonido(self):
+
+        print(f"{self.get_nombre()} está haciendo un sonido")
+
         pass
 
         
