@@ -5,7 +5,7 @@ class Celula(Microorganismo):
     def __init__(self, nombre, edad):
         super().__init__(nombre, edad)
         self.__tipo = None
-        self.mutacion = False
+        self.__mutacion = False
 
     # metodos get y set propios para el tipo
 
@@ -23,4 +23,8 @@ class Celula(Microorganismo):
 
     def dividirse(self):
         print(f"La célula {self.get_nombre()} está dividiéndose")
+
+    def mutacionactiva(self):
+        self.__mutacion = True
+        print(f"{self.get_nombre()} ha sufrido una mutación y puede infectar a otras especies")
         

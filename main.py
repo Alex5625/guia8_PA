@@ -31,8 +31,12 @@ def mutacion(mundo): # BACTERIAS 60%
     for i in mundo:
         for f in i:
             if isinstance(f,Celula) and isinstance(f,Microorganismo):
-                # match f
-                pass
+                mutado = random.randint(1,10)
+                match mutado:
+                    case 1 | 2 | 3 | 4 | 5 | 6: 
+                        f.mutacionactiva()
+                    case 7 | 8 | 9 | 10 | _: print(f"{f} no ha mutado")
+                
 
 
 def muertoporenfermo():
@@ -102,6 +106,7 @@ def main():
         print(f"Día {dia} en Biótica")
         dia += 1
         time.sleep(1)
+        mutacion(mundo)
     pass
 
 
