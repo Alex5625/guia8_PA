@@ -1,10 +1,13 @@
+
+
 class Organismo():
     
     def __init__(self,nombre,edad = 0):
         self.__nombre = nombre
         self.__edad = edad
-        self.vivo = bool
-        self.enfermo = False
+        self.__vivo = True
+        self.__zombie = False
+        self.__infectado = False
 
 
     def __repr__(self):
@@ -37,26 +40,40 @@ class Organismo():
         else:
             pass
     
+    def set_infectado(self,sino):
+        if isinstance(sino,bool):
+            self.__infectado = sino
+    
+    def get_infectado(self):
+        return self.__infectado
+    
     def get_vivomuerto(self):
 
-        if self.vivo:
-            return f"{self.get_nombre()} Está vivo"
+        if self.__vivo:
+            return True
         else:
-            return f"{self.get_nombre() } esta muerto"
+            return False
+        
+    def set_vivomuerto(self, estado):
+        if isinstance(estado,bool):
+            self.__vivo = estado
+
+    def set_zombie(self,zombie):
+        if isinstance(zombie,bool):
+            self.__zombie = zombie
+
+    def get_zombie(self):
+        return self.__zombie
+
     # metodos de interaccion y comportamiento
     # de clase
 
-
-
     def nacer(self):
         print(f"{self.get_nombre()} esta naciendo")
-        self.vivo = True
+        self.__vivo = True
     
     def crecer(self):
         self.__edad = self.__edad + 1
-    
-    def reproducirse(self):
-        pass
 
-    def morir(self):
-        self.vivo = False
+    def set_morir(self):
+        self.__vivo = False
